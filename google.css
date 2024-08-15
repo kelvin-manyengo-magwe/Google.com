@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-style: sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.box1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-grow: 1;
+  gap: 13px;
+}
+.box1 > div {
+  margin: 10px 5px 0 0;
+  display: flex;
+  justify-content: center;
+}
+.box1 > div > a {
+    text-decoration: none;
+    color: black;
+}
+.box1 > div:nth-child(n) {
+  position: relative;
+  border: 0px solid transparent; /* Initial border to keep layout consistent */
+  padding: 5px;
+
+  transition: all 0.7s ease-in-out;
+}
+.box1  > div:nth-child(n+3):hover {
+    padding: 5px;
+    background-color: rgba(128,128,128,0.2);
+    box-shadow: 0 0 20px rgba(128, 128, 128,0.2);
+    border: 0px solid rgba(128,128,128, 0.3); /* Border color on hover */
+    border-radius: 50px;
+}
